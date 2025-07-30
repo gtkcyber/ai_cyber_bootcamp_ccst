@@ -19,7 +19,9 @@ st.markdown("Your text here...")
 # selectbox here: https://docs.streamlit.io/develop/api-reference/widgets/st.selectbox
 # Don't forget to assign the value from the select box to a variable.
 industry_list = raw_data['industry'].unique()
-selected_industry = st.selectbox("Select industry", industry_list)
+selected_industry = st.selectbox(label="Select industry",
+                                 options=industry_list,
+                                 help="Select the industry you want to view.")
 
 # Now create two tabs, one for the data table, and other for a chart.  You may create more if you wish.
 # Here are the docs for the
